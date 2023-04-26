@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/0b221b4d79.js" crossorigin="anonymous"></script>
+    <title>starbucks landing page</title>
+</head>
+<body>
+    
+    <section>
+        <div class="circle">data</div>
+        <header>
+            <a href="#"> <img src="./img/logo.png" class="logo"></a>
+
+            <ul>
+                <li>
+                    <a href="#" class="link-data1">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="link-data2">Menu</a>
+                </li>
+                <li>
+                    <a href="#" class="link-data3">What's New</a>
+                </li>
+                <li>
+                    <a href="#" class="link-data4">Contact</a>
+                </li>
+            </ul>
+
+        </header>
+
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just coffee <br> It's <span class="sub-heading">Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Consequatur assumenda odit temporibus animi esse alias. Quisquam, 
+                eos fuga at commodi similique dolore illo beatae hic aliquam nihil
+                quaerat impedit distinctio consequuntur, laborum, accusantium blanditiis 
+                modi harum dolores animi. Cum, est
+                .</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+
+            <div class="imgbox">
+                <img src="./img/img1.png" class="starbucks">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><a href="#"><img src="./img/thumb1.png" loading="lazy" onclick="imgSlider('./img/img1.png'); changeColor('#017143')" ></a></li>
+            <li><a href="#"><img src="./img/thumb2.png" loading="lazy" onclick="imgSlider('./img/img2.png') ; changeColor('#eb7495')"></a></li>
+            <li><a href="#"><img src="./img/thumb3.png" loading="lazy" onclick="imgSlider('./img/img3.png') ; changeColor('#d752b1')"></a></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><i class="fa-brands fa-facebook-f" class="img-social" style="color:white;"></i></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"  class="img-social" style="color: white;"></i></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"   class="img-social" style="color: white;"></i></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything)
+        {
+            document.querySelector(".starbucks").src = anything;
+        }
+        
+        function changeColor(color)
+        {
+            const circle = document.querySelector(".circle");
+            const btnColor = document.querySelector(".btn");
+            const subColor = document.querySelector(".sub-heading");
+            const linkColor1 = document.querySelector(".link-data1");
+            const linkColor2 = document.querySelector(".link-data2");
+            const linkColor3 = document.querySelector(".link-data3");
+            const linkColor4 = document.querySelector(".link-data4");
+            circle.style.background = color;
+            btnColor.style.background = color;
+            subColor.style.color = color;
+            linkColor1.style.color = color;
+            linkColor2.style.color = color;
+            linkColor3.style.color = color;
+            linkColor4.style.color = color;
+        }
+    </script>
+    <script>
+       var typeData = new Typed(".sub-heading", {
+          strings: [
+              "Starbucks",
+              "Time To Taste Coffee",
+               "CITRUSY ZEST AND ZING",
+                "MIX IT UP",
+          ],
+          loop: true,
+          typeSpeed: 100,
+          backSpeed: 100,
+          backDelay: 1000,
+        });
+      </script>
+</body>
+</html>
